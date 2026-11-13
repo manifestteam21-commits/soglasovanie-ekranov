@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+<style>
+ .flick{animation:flick 6s infinite}
+ .flick2{animation:flick 9s infinite 1.7s}
+ .pulse{animation:pulse 3.2s ease-in-out infinite}
+ @keyframes flick{0%,38%,46%,70%,100%{opacity:1}40%{opacity:.62}42%{opacity:.95}44%{opacity:.7}72%{opacity:.86}74%{opacity:1}}
+ @keyframes pulse{0%,100%{opacity:.55}50%{opacity:1}}
+</style>
+<defs>
+ <filter id="b6" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+ <filter id="b14" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="14"/></filter>
+ <filter id="b34" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="34"/></filter>
+ <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#17303a"/><stop offset=".55" stop-color="#14181d"/><stop offset="1" stop-color="#241015"/></linearGradient>
+ <radialGradient id="glow"><stop offset="0" stop-color="#fff3de" stop-opacity=".95"/><stop offset=".35" stop-color="#ffd9a8" stop-opacity=".35"/><stop offset="1" stop-color="#ffd9a8" stop-opacity="0"/></radialGradient>
+ <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff0d6" stop-opacity=".42"/><stop offset="1" stop-color="#fff0d6" stop-opacity="0"/></linearGradient>
+ <radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".75"/></radialGradient>
+</defs>
+<rect width="1600" height="900" fill="#0d0a0c"/>
+<rect width="1600" height="900" fill="url(#wall)"/>
+<!-- стеновые панели -->
+<g filter="url(#b14)" opacity=".5" stroke="#3b5662" stroke-width="3"><path d="M0 300H1600M0 560H1600M420 0V900M980 0V900"/></g>
+<!-- дальние шкафы / стойка -->
+<g filter="url(#b14)"><rect x="40" y="320" width="300" height="360" rx="14" fill="#0f1418" opacity=".9"/><rect x="60" y="340" width="120" height="150" rx="8" fill="#1b2a30"/><rect x="200" y="340" width="120" height="150" rx="8" fill="#1b2a30"/></g>
+<!-- монитор -->
+<g filter="url(#b6)"><rect x="470" y="300" width="250" height="160" rx="12" fill="#0a1d1d"/><polyline class="pulse" points="485,390 530,390 548,345 566,430 584,370 604,390 640,390 658,372 676,390 706,390" fill="none" stroke="#35e6a0" stroke-width="5" stroke-linejoin="round"/></g>
+<circle cx="600" cy="380" r="170" fill="#1fd68a" opacity=".12" filter="url(#b34)"/>
+<!-- бокэ -->
+<g filter="url(#b6)">
+ <circle cx="150" cy="150" r="40" fill="#35c6d9" opacity=".30"/><circle cx="260" cy="230" r="22" fill="#ff5a68" opacity=".45"/>
+ <circle cx="780" cy="130" r="30" fill="#ffd9a0" opacity=".28"/><circle cx="880" cy="250" r="18" fill="#35c6d9" opacity=".4"/>
+ <circle cx="1420" cy="560" r="46" fill="#ff5a68" opacity=".22"/><circle cx="1500" cy="420" r="26" fill="#ffd9a0" opacity=".3"/>
+ <circle cx="1030" cy="620" r="20" fill="#35c6d9" opacity=".35"/><circle cx="90" cy="600" r="34" fill="#ff5a68" opacity=".22"/>
+</g>
+<!-- конус света от лампы -->
+<polygon class="flick" points="1090,260 1290,260 1600,880 900,880" fill="url(#cone)" filter="url(#b34)"/>
+<!-- вторая лампа (дальняя) -->
+<g class="flick2" opacity=".75" filter="url(#b14)">
+ <circle cx="420" cy="70" r="120" fill="#161214"/>
+ <circle cx="420" cy="70" r="24" fill="#fff0d6"/><circle cx="372" cy="70" r="14" fill="#fff0d6"/><circle cx="468" cy="70" r="14" fill="#fff0d6"/><circle cx="420" cy="118" r="14" fill="#fff0d6"/>
+</g>
+<!-- основная операционная лампа -->
+<g class="flick">
+ <circle cx="1190" cy="170" r="300" fill="url(#glow)" filter="url(#b34)"/>
+ <g filter="url(#b6)">
+  <circle cx="1190" cy="170" r="160" fill="#1a1517"/>
+  <circle cx="1190" cy="170" r="148" fill="none" stroke="#3b3033" stroke-width="5"/>
+  <circle cx="1190" cy="170" r="38" fill="#fff6e6"/>
+  <g fill="#fff3dc"><circle cx="1190" cy="78" r="26"/><circle cx="1255" cy="105" r="26"/><circle cx="1282" cy="170" r="26"/><circle cx="1255" cy="235" r="26"/><circle cx="1190" cy="262" r="26"/><circle cx="1125" cy="235" r="26"/><circle cx="1098" cy="170" r="26"/><circle cx="1125" cy="105" r="26"/></g>
+ </g>
+</g>
+<!-- стол -->
+<g filter="url(#b14)"><rect x="520" y="700" width="1020" height="170" rx="60" fill="#2a2326"/><rect x="540" y="704" width="980" height="14" rx="7" fill="#8f7b75" opacity=".55"/></g>
+<rect width="1600" height="900" fill="url(#vig)"/>
+</svg>

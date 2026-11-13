@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Три цветовых решения первого экрана сайта Светланы Пшонкиной.">
+  <title>Согласование экранов</title>
+  <link rel="stylesheet" href="variant-1/assets/fonts-refined.css">
+  <link rel="stylesheet" href="review.css">
+  <script src="review.js" defer></script>
+</head>
+<body>
+  <header class="review-bar">
+    <div class="review-heading">
+      <h1>Согласование экранов</h1>
+      <p>Светлана Пшонкина</p>
+    </div>
+    <div class="variant-tabs" role="tablist" aria-label="Цветовые варианты">
+      <button type="button" role="tab" id="tab-1" aria-controls="preview-panel" aria-selected="true" data-variant="1"><span class="swatch swatch-teal" aria-hidden="true"></span>Вариант 1</button>
+      <button type="button" role="tab" id="tab-2" aria-controls="preview-panel" aria-selected="false" tabindex="-1" data-variant="2"><span class="swatch swatch-wine" aria-hidden="true"></span>Вариант 2</button>
+      <button type="button" role="tab" id="tab-3" aria-controls="preview-panel" aria-selected="false" tabindex="-1" data-variant="3"><span class="swatch swatch-blue" aria-hidden="true"></span>Вариант 3</button>
+    </div>
+    <a class="open-link" id="open-variant" href="variant-1/index.html" target="_blank" rel="noopener">Открыть отдельно <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+  </header>
+  <main class="preview-panel" id="preview-panel" role="tabpanel" aria-labelledby="tab-1" tabindex="0" aria-busy="true">
+    <iframe id="preview" title="Вариант 1 — сине-зелёный" src="variant-1/index.html"></iframe>
+    <div class="loading" id="loading" role="status"><span class="spinner" aria-hidden="true"></span>Загружаем вариант…</div>
+    <div class="load-error" id="load-error" hidden>
+      <p>Макет загружается дольше обычного.</p>
+      <button type="button" id="retry">Повторить загрузку</button>
+      <a id="fallback-link" href="variant-1/index.html" target="_blank" rel="noopener">Открыть в отдельной вкладке</a>
+    </div>
+  </main>
+  <p class="sr-only" id="selection-status" aria-live="polite"></p>
+  <noscript><p>Открыть макет: <a href="variant-1/index.html">Вариант 1</a>, <a href="variant-2/index.html">Вариант 2</a>, <a href="variant-3/index.html">Вариант 3</a>.</p></noscript>
+</body>
+</html>
