@@ -20,7 +20,7 @@ h1{font-family:'Tenor Sans',sans-serif;font-weight:400}
 @media(min-width:1200px){
  html{scrollbar-gutter:auto}
  body{padding:16px}
- .stage{width:100%;max-width:1568px;min-height:0;border-radius:32px;padding:18px 18px 0;box-shadow:0 20px 50px -32px #542a3855}
+ .stage{width:100%;max-width:1568px;min-height:0;border-radius:32px;padding:18px 18px 0;box-shadow:0 20px 50px -32px #42191555}
  .site-header{display:flex;align-items:center;justify-content:flex-start;gap:10px;min-height:66px;padding:9px 19px;margin:0 auto;border-radius:22px}
  .brand{min-width:42px;flex:none}.brand-mark{width:42px;height:23px}
  .utility-nav{flex:0 1 auto;gap:9px;justify-content:flex-start;margin-left:32px}
@@ -125,7 +125,7 @@ h1{font-family:'Tenor Sans',sans-serif;font-weight:400}
  .intro{grid-column:1;grid-row:1}.results-heading{grid-column:1;grid-row:2}.comparison{grid-column:1;grid-row:3}
  .doctor-figure{grid-column:1;grid-row:4;position:relative;inset:auto;align-self:end;justify-self:center;width:92%;height:auto;margin:12px 0 0;max-width:360px;overflow:visible}
  .doctor{width:100%;height:auto;max-height:none;object-fit:contain;object-position:bottom}
- .action-block{grid-column:1;grid-row:5;align-self:end;margin:-120px -10px 0;padding:0 10px 12px;max-width:none;background:linear-gradient(0deg,#592637 0%,#592637ed 10%,#59263700 60%)}
+ .action-block{grid-column:1;grid-row:5;align-self:end;margin:-120px -10px 0;padding:0 10px 12px;max-width:none;background:linear-gradient(0deg,#360a0c 0%,#360a0ced 10%,#360a0c00 60%)}
  .benefits{grid-column:1;grid-row:6}.messengers{grid-column:1;grid-row:7;margin-bottom:10px}
  .doctor-badge{width:78px;height:78px;right:-7px;left:auto;top:40%}
  .messengers>a,.messengers>button{padding:5px 9px 5px 5px;font-size:10px;gap:5px}

@@ -4,10 +4,10 @@
   const panel = document.getElementById('preview-panel');
   const loading = document.getElementById('loading');
   const error = document.getElementById('load-error');
-  const labels = ['сине-зелёный', 'винный', 'синий'];
+  const labels = ['сине-зелёный', 'глубокий бордовый', 'синий', 'насыщенный красный'];
   let current = '1';
   let timer;
-  const readHash = () => /^#variant-[123]$/.test(location.hash) ? location.hash.slice(-1) : '1';
+  const readHash = () => tabs.find(tab => location.hash === `#variant-${tab.dataset.variant}`)?.dataset.variant || '1';
   function pending() {
     clearTimeout(timer);
     panel.setAttribute('aria-busy', 'true');
@@ -29,7 +29,7 @@
       tab.setAttribute('aria-selected', String(active));
       tab.tabIndex = active ? 0 : -1;
     });
-    const path = `variant-${value}/index.html`;
+    const path = `variant-${value}/index.html?v=20261113-red-palettes`;
     panel.setAttribute('aria-labelledby', `tab-${value}`);
     frame.title = `Вариант ${value} — ${labels[Number(value)-1]}`;
     document.getElementById('open-variant').href = path;

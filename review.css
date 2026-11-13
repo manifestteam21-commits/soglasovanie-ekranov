@@ -1,4 +1,4 @@
-:root{--ink:#283238;--muted:#687176;--line:#dde1e1;--paper:#fbfaf7;--teal:#246d75;--wine:#7c3045;--blue:#2b5d9a;--focus:#2b5d9a;--scroll-thumb:#9da8ad;--scroll-track:#eef1f2;color-scheme:light;font-family:Manrope,Arial,sans-serif;color:var(--ink);background:var(--paper)}
+:root{--ink:#283238;--muted:#687176;--line:#dde1e1;--paper:#fbfaf7;--teal:#246d75;--burgundy:#4c1012;--red:#b51f2a;--blue:#2b5d9a;--focus:#2b5d9a;--scroll-thumb:#9da8ad;--scroll-track:#eef1f2;color-scheme:light;font-family:Manrope,Arial,sans-serif;color:var(--ink);background:var(--paper)}
 *{box-sizing:border-box;scrollbar-color:var(--scroll-thumb) var(--scroll-track);scrollbar-width:thin}
 *::-webkit-scrollbar{width:10px;height:10px}*::-webkit-scrollbar-track{background:var(--scroll-track)}*::-webkit-scrollbar-thumb{background:var(--scroll-thumb);border:2px solid var(--scroll-track);border-radius:10px}*::-webkit-scrollbar-thumb:hover{background:#718087}
 body{margin:0;display:flex;flex-direction:column;height:100vh;height:100dvh;min-height:280px}
@@ -10,7 +10,7 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:poin
 .variant-tabs button{border:0;display:flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 18px;border-radius:999px;background:transparent;color:#535e62;font-size:13px;font-weight:650;white-space:nowrap;transition:background .16s,color .16s,box-shadow .16s}
 .variant-tabs button:hover{background:#e1e6e5;color:var(--ink)}.variant-tabs button:active{background:#d6dddd}
 .variant-tabs button[aria-selected=true]{background:white;box-shadow:0 1px 5px #152b3114;color:var(--ink)}
-.swatch{height:10px;width:10px;flex-shrink:0;border-radius:50%}.swatch-teal{background:var(--teal)}.swatch-wine{background:var(--wine)}.swatch-blue{background:var(--blue)}
+.swatch{height:10px;width:10px;flex-shrink:0;border-radius:50%}.swatch-teal{background:var(--teal)}.swatch-burgundy{background:var(--burgundy)}.swatch-blue{background:var(--blue)}.swatch-red{background:var(--red)}
 .open-link{justify-self:end;display:inline-flex;gap:8px;align-items:center;font-size:12px;min-height:40px;padding:8px 0;border-bottom:1px solid transparent}.open-link:hover{border-color:var(--ink)}.open-link:active{opacity:.65}.open-link svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5}
 .preview-panel{position:relative;flex:1;min-height:0;background:#eef1f1}iframe{width:100%;height:100%;display:block;border:0;background:#eef1f1}
 .loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:12px;background:var(--paper);color:var(--muted);font-size:14px;pointer-events:none}.spinner{width:19px;height:19px;border:2px solid var(--line);border-top-color:var(--ink);border-radius:50%;animation:spin .7s linear infinite}
@@ -20,5 +20,6 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:poin
 @media(max-width:1000px){.review-bar{gap:14px;padding:12px 18px}.review-heading h1{font-size:15px}.variant-tabs button{padding:0 12px}}
 @media(max-width:760px){.review-bar{grid-template-columns:1fr auto;gap:10px 12px;padding:12px 16px}.variant-tabs{grid-column:1/-1;grid-row:2;justify-self:center}.review-heading h1{font-size:15px}.review-heading p{font-size:11px}.open-link{font-size:11px;gap:4px}.variant-tabs button{padding:0 16px;min-height:36px;font-size:12px}}
 @media(max-width:360px){.review-bar{padding:10px 12px;gap:8px}.review-heading h1{font-size:13px}.open-link{font-size:10px}.open-link svg{width:14px}.variant-tabs button{padding:0 12px;gap:6px}.swatch{width:8px;height:8px}}
+@media(max-width:760px){.variant-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:min(100%,460px);min-width:0;padding:3px;gap:2px}.variant-tabs button{min-width:0;padding:0 5px;font-size:11px;gap:5px}.swatch{width:8px;height:8px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media(forced-colors:active){.variant-tabs button[aria-selected=true]{outline:2px solid Highlight;outline-offset:-3px}*{scrollbar-color:auto}}
